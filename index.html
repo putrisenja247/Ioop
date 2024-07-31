@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream Invite</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showPopup() {
+            // Create the popup elements
+            var popup = document.createElement('div');
+            var popupContent = document.createElement('div');
+            var message = document.createElement('p');
+            var okButton = document.createElement('button');
+            
+            // Style the popup
+            popup.style.position = 'fixed';
+            popup.style.top = '0';
+            popup.style.left = '0';
+            popup.style.width = '100%';
+            popup.style.height = '100%';
+            popup.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+            popup.style.display = 'flex';
+            popup.style.justifyContent = 'center';
+            popup.style.alignItems = 'center';
+
+            popupContent.style.backgroundColor = 'white';
+            popupContent.style.padding = '20px';
+            popupContent.style.borderRadius = '5px';
+            popupContent.style.textAlign = 'center';
+
+            // Set the message
+            message.textContent = "Setelah Klik Oke lalu Klik Konfirmasi/Yes agar bisa Segera Terhubung sama aku mas.";
+
+            // Style the button
+            okButton.textContent = 'OK';
+            okButton.style.marginTop = '20px';
+            okButton.style.padding = '10px 20px';
+            okButton.style.backgroundColor = '#4267b2';
+            okButton.style.color = 'white';
+            okButton.style.border = 'none';
+            okButton.style.borderRadius = '5px';
+            okButton.style.cursor = 'pointer';
+
+            // Append elements
+            popupContent.appendChild(message);
+            popupContent.appendChild(okButton);
+            popup.appendChild(popupContent);
+            document.body.appendChild(popup);
+
+            // Add event listener to the button
+            okButton.addEventListener('click', function() {
+                window.location.href = 'DirectLink'; // Ganti dengan URL tujuan Anda
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Sedang menunggu kamu untuk bergabung siaran langsung..</div>
+        <div class="live-badge">
+            <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+        <a href="#" class="button" onclick="showPopup()">LIHAT LIVE AKU SEKARANG</a>
+        <div class="instructions">
+            Pencet Tombol diatas <span class="emoji">☝</span><br>
+            Jangan lupa yahh, Setelah klik tombol diatas <span class="emoji">☝</span> nanti kamu geser pelan-pelan kebawah, dan tunggu selama 3 menit saja sampai muncul (Buka / Open) <span class="emoji"></span>
+        </div>
+        <div class="footer">AKU TUNGGU SEKARANG YA SAYANG <span class="emoji">💧</span></div>
+    </div>
+</body>
+</html>
